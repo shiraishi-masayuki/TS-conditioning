@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>料金プラン | TS conditioning</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 56px;
+}
+.plan-card {
+  border: 1px solid var(--gray-3);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.plan-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.1); }
+.plan-card.featured {
+  border-color: var(--black);
+  border-width: 2px;
+}
+.plan-head {
+  background: var(--gray-1);
+  padding: 32px 28px;
+  text-align: center;
+}
+.plan-card.featured .plan-head { background: var(--black); color: var(--white); }
+.plan-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  background: var(--accent);
+  color: var(--white);
+  padding: 3px 10px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+.plan-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.plan-en {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--gray-5);
+  letter-spacing: 0.08em;
+}
+.plan-card.featured .plan-en { color: rgba(255,255,255,0.5); }
+.plan-price-area { padding: 28px 28px 0; }
+.plan-price {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1;
+}
+.plan-price sup { font-size: 20px; vertical-align: super; }
+.plan-price sub { font-size: 14px; font-family: var(--font-body); color: var(--gray-5); }
+.plan-note {
+  font-size: 12px;
+  color: var(--gray-5);
+  margin-top: 8px;
+}
+.plan-features {
+  padding: 24px 28px 32px;
+}
+.plan-features li {
+  font-size: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-1);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.plan-features li::before {
+  content: '✓';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.plan-cta { padding: 0 28px 32px; }
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+.payment-item {
+  background: var(--gray-1);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+}
+.payment-item span {
+  display: block;
+  font-size: 13px;
+  color: var(--gray-8);
+  margin-top: 6px;
+}
+</style>
+</head>
+<body>
+<header id="site-header" data-light="true" class="light-bg">
+  <div class="header-inner">
+    <a href="index.html" class="logo" style="color:var(--black);">TS conditioning</a>
+    <nav class="pc-nav">
+      <a href="features.html" class="nav-link" style="color:var(--gray-8);">TSの特徴</a>
+      <a href="plan.html" class="nav-link active" style="color:var(--black);">料金</a>
+      <a href="program.html" class="nav-link" style="color:var(--gray-8);">プログラム</a>
+      <a href="flow.html" class="nav-link" style="color:var(--gray-8);">ご利用の流れ</a>
+      <a href="reviews.html" class="nav-link" style="color:var(--gray-8);">口コミ</a>
+      <a href="faq.html" class="nav-link" style="color:var(--gray-8);">FAQ</a>
+      <a href="access.html" class="nav-link" style="color:var(--gray-8);">アクセス</a>
+    </nav>
+    <a href="https://lin.ee/qMROsFb" target="_blank" class="header-cta" style="color:var(--black);border-color:var(--black);">無料体験を予約</a>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span style="background:var(--black);"></span><span style="background:var(--black);"></span><span style="background:var(--black);"></span>
+    </button>
+  </div>
+</header>
+<div id="mobile-nav">
+  <a href="features.html" class="mobile-nav-link">TSの特徴</a>
+  <a href="plan.html" class="mobile-nav-link">料金</a>
+  <a href="program.html" class="mobile-nav-link">プログラム</a>
+  <a href="flow.html" class="mobile-nav-link">ご利用の流れ</a>
+  <a href="reviews.html" class="mobile-nav-link">口コミ</a>
+  <a href="faq.html" class="mobile-nav-link">FAQ</a>
+  <a href="access.html" class="mobile-nav-link">アクセス</a>
+</div>
+
+<div class="page-hero">
+  <p class="section-label">PLAN</p>
+  <h1 class="section-title">料金プラン</h1>
+  <div class="divider center"></div>
+  <p style="font-size:15px;color:rgba(255,255,255,0.65);max-width:440px;margin:0 auto;line-height:1.9;">
+    年会費・月会費は一切いただいておりません。<br>
+    1回から気軽にお試しいただけます。
+  </p>
+</div>
+
+<section>
+  <div class="container">
+    <p class="section-label fade-up">PRICING</p>
+    <h2 class="section-title fade-up delay-1">シンプルな<br>料金体系</h2>
+    <div class="divider fade-up delay-2"></div>
+
+    <div class="plan-grid">
+      <div class="plan-card fade-up delay-1">
+        <div class="plan-head">
+          <p class="plan-name">パーソナルコンディショニング</p>
+          <p class="plan-en">Personal Conditioning</p>
+        </div>
+        <div class="plan-price-area">
+          <div class="plan-price"><sup>¥</sup>3,000<sub>〜 / 回</sub></div>
+          <p class="plan-note">30分〜のトレーニング</p>
+        </div>
+        <ul class="plan-features">
+          <li>身体の引き締め・姿勢改善</li>
+          <li>痛みの緩和アプローチ</li>
+          <li>マンツーマン完全個別指導</li>
+          <li>食事アドバイス付き</li>
+        </ul>
+        <div class="plan-cta">
+          <a href="https://lin.ee/qMROsFb" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;"><span>体験予約</span></a>
+        </div>
+      </div>
+
+      <div class="plan-card featured fade-up delay-2">
+        <div class="plan-head">
+          <span class="plan-badge">POPULAR</span>
+          <p class="plan-name">オンラインパーソナル</p>
+          <p class="plan-en">Online Personal Training</p>
+        </div>
+        <div class="plan-price-area">
+          <div class="plan-price"><sup>¥</sup>2,000<sub>〜 / 回</sub></div>
+          <p class="plan-note" style="color:var(--gray-5);">30分〜のトレーニング</p>
+        </div>
+        <ul class="plan-features">
+          <li>自宅から受講・移動ゼロ</li>
+          <li>引き締め・姿勢改善・産後ケア</li>
+          <li>LINEでの食事管理サポート</li>
+          <li>時間・場所を選ばない柔軟性</li>
+        </ul>
+        <div class="plan-cta">
+          <a href="https://lin.ee/qMROsFb" target="_blank" class="btn btn-line" style="width:100%;justify-content:center;"><span>体験予約</span></a>
+        </div>
+      </div>
+
+      <div class="plan-card fade-up delay-3">
+        <div class="plan-head">
+          <p class="plan-name">ジュニアパーソナル</p>
+          <p class="plan-en">Junior Personal Training</p>
+        </div>
+        <div class="plan-price-area">
+          <div class="plan-price"><sup>¥</sup>2,500<sub>〜 / 回</sub></div>
+          <p class="plan-note">30分〜のトレーニング</p>
+        </div>
+        <ul class="plan-features">
+          <li>子どもの運動神経向上</li>
+          <li>競技特化トレーニング</li>
+          <li>楽しく「できた！」を育てる指導</li>
+          <li>成長期に最適なプログラム</li>
+        </ul>
+        <div class="plan-cta">
+          <a href="https://lin.ee/qMROsFb" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;"><span>体験予約</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sm" style="background:var(--gray-1);">
+  <div class="container">
+    <p class="section-label fade-up">PAYMENT</p>
+    <h2 class="section-title fade-up delay-1">お支払い方法</h2>
+    <div class="divider fade-up delay-2"></div>
+    <p class="fade-up delay-2" style="font-size:14px;color:var(--gray-5);">以下のお支払い方法に対応しております。</p>
+    <div class="payment-grid">
+      <div class="payment-item fade-up delay-1">💴<span>現金</span></div>
+      <div class="payment-item fade-up delay-2">💳<span>クレジットカード</span></div>
+      <div class="payment-item fade-up delay-3">🏦<span>銀行振込</span></div>
+      <div class="payment-item fade-up delay-4">📱<span>電子マネー</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <p class="section-label">FREE TRIAL</p>
+  <h2 class="cta-band-title">まずは無料体験から</h2>
+  <p class="cta-band-sub">詳しい料金・プランは無料カウンセリングにてご相談ください。</p>
+  <div class="cta-band-btns">
+    <a href="https://lin.ee/qMROsFb" target="_blank" class="btn btn-line"><span>LINEで無料体験を予約</span></a>
+  </div>
+</div>
+
+<footer id="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">TS conditioning</p>
+        <p class="footer-tagline">あなた史上最高のコンディションを手にしよう。</p>
+        <div class="footer-info">
+          <strong>ADDRESS</strong>埼玉県川口市大字長蔵 FIESTA DE INOUE VI 2F
+          <strong>HOURS</strong>月〜土 9:00–21:00 ／ 日 9:00–13:00
+          <strong>TEL</strong>080-2053-4035
+        </div>
+      </div>
+      <div>
+        <p style="font-size:11px;letter-spacing:.15em;color:var(--accent-l);margin-bottom:16px;">NAVIGATION</p>
+        <div class="footer-nav-grid">
+          <a href="index.html">ホーム</a><a href="features.html">TSの特徴</a>
+          <a href="plan.html">料金</a><a href="program.html">プログラム</a>
+          <a href="flow.html">ご利用の流れ</a><a href="reviews.html">口コミ</a>
+          <a href="faq.html">よくある質問</a><a href="access.html">アクセス</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-sns">
+        <a href="https://lin.ee/qMROsFb" target="_blank" aria-label="LINE">LINE</a>
+        <a href="https://www.instagram.com/ts.conditioning/" target="_blank" aria-label="Instagram">IG</a>
+      </div>
+      <p class="footer-copy">© 2025 TS conditioning. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<div class="float-cta">
+  <a href="https://lin.ee/qMROsFb" target="_blank" class="float-btn line">📲 LINE予約</a>
+  <a href="tel:08020534035" class="float-btn tel">📞 電話する</a>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

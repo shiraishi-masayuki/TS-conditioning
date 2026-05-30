@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プログラム | TS conditioning</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.prog-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1px;
+  background: var(--gray-3);
+  margin-top: 56px;
+}
+.prog-hero-card {
+  background: var(--white);
+  padding: 36px 28px;
+  transition: background 0.3s;
+}
+.prog-hero-card:hover { background: var(--gray-1); }
+.prog-hero-card .section-label { margin-bottom: 6px; }
+.prog-hero-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+.prog-hero-card .price {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.prog-hero-card p { font-size: 13px; color: var(--gray-5); }
+
+.prog-detail { padding: 72px 0; border-bottom: 1px solid var(--gray-3); }
+.prog-detail:last-child { border-bottom: none; }
+.prog-detail-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.prog-detail-inner.reverse > :first-child { order: 2; }
+.prog-detail-inner.reverse > :last-child { order: 1; }
+.prog-img {
+  background: var(--gray-1);
+  border-radius: var(--radius);
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--gray-5);
+  letter-spacing: .08em;
+}
+.prog-detail-title { font-size: 22px; font-weight: 700; margin-bottom: 16px; line-height: 1.4; }
+.prog-detail-body { font-size: 15px; color: var(--gray-8); line-height: 2; margin-bottom: 20px; }
+.prog-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.prog-tag {
+  font-size: 12px;
+  background: var(--gray-1);
+  border: 1px solid var(--gray-3);
+  border-radius: 2px;
+  padding: 4px 12px;
+  color: var(--gray-8);
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.support-card {
+  text-align: center;
+  padding: 36px 24px;
+  border: 1px solid var(--gray-3);
+  border-radius: var(--radius);
+}
+.support-icon { font-size: 32px; margin-bottom: 16px; }
+.support-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+.support-card p { font-size: 13px; color: var(--gray-5); line-height: 1.8; }
+
+@media (max-width: 768px) {
+  .prog-hero-grid { grid-template-columns: 1fr; }
+  .prog-detail-inner { grid-template-columns: 1fr; gap: 32px; }
+  .prog-detail-inner.reverse > :first-child { order: 1; }
+  .prog-detail-inner.reverse > :last-child { order: 2; }
+  .support-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header id="site-header" data-light="true" class="light-bg">
+  <div class="header-inner">
+    <a href="index.html" class="logo" style="color:var(--black);">TS conditioning</a>
+    <nav class="pc-nav">
+      <a href="features.html" class="nav-link" style="color:var(--gray-8);">TSの特徴</a>
+      <a href="plan.html" class="nav-link" style="color:var(--gray-8);">料金</a>
+      <a href="program.html" class="nav-link active" style="color:var(--black);">プログラム</a>
+      <a href="flow.html" class="nav-link" style="color:var(--gray-8);">ご利用の流れ</a>
+      <a href="reviews.html" class="nav-link" style="color:var(--gray-8);">口コミ</a>
+      <a href="faq.html" class="nav-link" style="color:var(--gray-8);">FAQ</a>
+      <a href="access.html" class="nav-link" style="color:var(--gray-8);">アクセス</a>
+    </nav>
+    <a href="https://lin.ee/qMROsFb" target="_blank" class="header-cta" style="color:var(--black);border-color:var(--black);">無料体験を予約</a>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span style="background:var(--black);"></span><span style="background:var(--black);"></span><span style="background:var(--black);"></span>
+    </button>
+  </div>
+</header>
+<div id="mobile-nav">
+  <a href="features.html" class="mobile-nav-link">TSの特徴</a>
+  <a href="plan.html" class="mobile-nav-link">料金</a>
+  <a href="program.html" class="mobile-nav-link">プログラム</a>
+  <a href="flow.html" class="mobile-nav-link">ご利用の流れ</a>
+  <a href="reviews.html" class="mobile-nav-link">口コミ</a>
+  <a href="faq.html" class="mobile-nav-link">FAQ</a>
+  <a href="access.html" class="mobile-nav-link">アクセス</a>
+</div>
+
+<div class="page-hero">
+  <p class="section-label">PROGRAM</p>
+  <h1 class="section-title">プログラム</h1>
+  <div class="divider center"></div>
+  <p style="font-size:15px;color:rgba(255,255,255,0.65);max-width:480px;margin:0 auto;line-height:1.9;">
+    あなたの身体に寄り添う、安全で効果的なマンツーマン指導。<br>
+    科学的根拠に基づき、子どもから大人まで対応します。
+  </p>
+</div>
+
+<section>
+  <div class="container">
+    <p class="section-label fade-up">OUR PROGRAMS</p>
+    <h2 class="section-title fade-up delay-1">3つのコース</h2>
+    <div class="divider fade-up delay-2"></div>
+    <div class="prog-hero-grid">
+      <div class="prog-hero-card fade-up">
+        <p class="section-label">PERSONAL</p>
+        <h3>パーソナルコンディショニング</h3>
+        <div class="price">¥3,000<span style="font-size:14px;font-family:var(--font-body);color:var(--gray-5);">〜 / 30分〜</span></div>
+        <p>身体の引き締め・姿勢改善・痛みの緩和。完全個別プログラムで対面指導。</p>
+      </div>
+      <div class="prog-hero-card fade-up delay-1">
+        <p class="section-label">ONLINE</p>
+        <h3>オンラインパーソナル</h3>
+        <div class="price">¥2,000<span style="font-size:14px;font-family:var(--font-body);color:var(--gray-5);">〜 / 30分〜</span></div>
+        <p>自宅から受講。引き締め・姿勢改善・産後ケアまで対応。移動ゼロで続けやすい。</p>
+      </div>
+      <div class="prog-hero-card fade-up delay-2">
+        <p class="section-label">JUNIOR</p>
+        <h3>ジュニアパーソナル</h3>
+        <div class="price">¥2,500<span style="font-size:14px;font-family:var(--font-body);color:var(--gray-5);">〜 / 30分〜</span></div>
+        <p>子どもの運動神経向上・競技特化。成長期の「できた！」を育てる指導。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--gray-1);">
+  <div class="container">
+    <p class="section-label fade-up">CONTENTS</p>
+    <h2 class="section-title fade-up delay-1">コンディショニングの内容</h2>
+    <div class="divider fade-up delay-2"></div>
+
+    <div class="prog-detail">
+      <div class="prog-detail-inner">
+        <div class="fade-up">
+          <p class="section-label">SCIENCE-BASED</p>
+          <h3 class="prog-detail-title">科学的根拠に基づいた<br>効率的トレーニング</h3>
+          <p class="prog-detail-body">最新の運動生理学・機能解剖学・トレーニング理論をベースに、一人ひとりの身体状態や目標に合わせたトレーニングを提供。科学に裏付けされたメソッドで、最短で安全に結果を出すことが可能になります。</p>
+          <div class="prog-tags">
+            <span class="prog-tag">運動生理学</span>
+            <span class="prog-tag">機能解剖学</span>
+            <span class="prog-tag">栄養学</span>
+          </div>
+        </div>
+        <div class="prog-img fade-up delay-2">写真スペース</div>
+      </div>
+    </div>
+
+    <div class="prog-detail">
+      <div class="prog-detail-inner reverse">
+        <div class="fade-up">
+          <p class="section-label">PILATES</p>
+          <h3 class="prog-detail-title">マットピラティスによる<br>姿勢不良の改善</h3>
+          <p class="prog-detail-body">ピラティスや体幹トレーニングで深層筋（インナーユニット）を活性化し、慢性痛や姿勢不良を改善します。正しいトレーニングフォームの修正と個々の身体に応じた応用を取り入れ、効果を最大限に引き出します。</p>
+          <div class="prog-tags">
+            <span class="prog-tag">マットピラティス</span>
+            <span class="prog-tag">体幹トレーニング</span>
+            <span class="prog-tag">姿勢改善</span>
+          </div>
+        </div>
+        <div class="prog-img fade-up delay-2">写真スペース</div>
+      </div>
+    </div>
+
+    <div class="prog-detail">
+      <div class="prog-detail-inner">
+        <div class="fade-up">
+          <p class="section-label">STRETCH</p>
+          <h3 class="prog-detail-title">パーソナルストレッチによる<br>柔軟性向上</h3>
+          <p class="prog-detail-body">トレーナーがマンツーマンで筋肉や関節の可動域にアプローチ。セルフストレッチでは届きにくい深層部までしっかり伸ばすことで、筋肉の緊張緩和・姿勢改善・血流促進・関節の動きやすさが向上します。</p>
+          <div class="prog-tags">
+            <span class="prog-tag">パーソナルストレッチ</span>
+            <span class="prog-tag">可動域拡大</span>
+            <span class="prog-tag">血流改善</span>
+          </div>
+        </div>
+        <div class="prog-img fade-up delay-2">写真スペース</div>
+      </div>
+    </div>
+
+    <div class="prog-detail">
+      <div class="prog-detail-inner reverse">
+        <div class="fade-up">
+          <p class="section-label">FUNCTIONAL</p>
+          <h3 class="prog-detail-title">ファンクショナルトレーニングによる<br>神経系の活性化</h3>
+          <p class="prog-detail-body">機能的なトレーニングで、子どもの運動神経発達やケガの予防に効果的。競技スポーツにおけるパフォーマンス向上も視野に入れたプログラムを実施。運動神経は才能ではなく、トレーニングで鍛えられます。</p>
+          <div class="prog-tags">
+            <span class="prog-tag">ファンクショナル</span>
+            <span class="prog-tag">ケガ予防</span>
+            <span class="prog-tag">競技特化</span>
+          </div>
+        </div>
+        <div class="prog-img fade-up delay-2">写真スペース</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="section-label fade-up">SUPPORT</p>
+    <h2 class="section-title fade-up delay-1">サポート体制</h2>
+    <div class="divider fade-up delay-2"></div>
+    <div class="support-grid">
+      <div class="support-card fade-up delay-1">
+        <div class="support-icon">💬</div>
+        <h3>カウンセリング</h3>
+        <p>定期的なカウンセリングでメンタル面もサポート。目標に向けて一緒に歩みます。</p>
+      </div>
+      <div class="support-card fade-up delay-2">
+        <div class="support-icon">🏋️</div>
+        <h3>専属トレーナー</h3>
+        <p>あなただけの専属トレーナーによるマンツーマン60分完全個別指導。</p>
+      </div>
+      <div class="support-card fade-up delay-3">
+        <div class="support-icon">🥗</div>
+        <h3>食事管理</h3>
+        <p>公式LINEによるフィードバックとアドバイスで安心の食事サポート。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <p class="section-label">FREE TRIAL</p>
+  <h2 class="cta-band-title">まずは無料体験で<br>プログラムを体感してください</h2>
+  <p class="cta-band-sub">60分で「原因」と「改善方法」がわかります。</p>
+  <div class="cta-band-btns">
+    <a href="https://lin.ee/qMROsFb" target="_blank" class="btn btn-line"><span>LINEで無料体験を予約</span></a>
+  </div>
+</div>
+
+<footer id="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">TS conditioning</p>
+        <p class="footer-tagline">あなた史上最高のコンディションを手にしよう。</p>
+        <div class="footer-info">
+          <strong>ADDRESS</strong>埼玉県川口市大字長蔵 FIESTA DE INOUE VI 2F
+          <strong>HOURS</strong>月〜土 9:00–21:00 ／ 日 9:00–13:00
+          <strong>TEL</strong>080-2053-4035
+        </div>
+      </div>
+      <div>
+        <p style="font-size:11px;letter-spacing:.15em;color:var(--accent-l);margin-bottom:16px;">NAVIGATION</p>
+        <div class="footer-nav-grid">
+          <a href="index.html">ホーム</a><a href="features.html">TSの特徴</a>
+          <a href="plan.html">料金</a><a href="program.html">プログラム</a>
+          <a href="flow.html">ご利用の流れ</a><a href="reviews.html">口コミ</a>
+          <a href="faq.html">よくある質問</a><a href="access.html">アクセス</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-sns">
+        <a href="https://lin.ee/qMROsFb" target="_blank" aria-label="LINE">LINE</a>
+        <a href="https://www.instagram.com/ts.conditioning/" target="_blank" aria-label="Instagram">IG</a>
+      </div>
+      <p class="footer-copy">© 2025 TS conditioning. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<div class="float-cta">
+  <a href="https://lin.ee/qMROsFb" target="_blank" class="float-btn line">📲 LINE予約</a>
+  <a href="tel:08020534035" class="float-btn tel">📞 電話する</a>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

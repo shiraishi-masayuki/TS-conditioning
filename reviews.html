@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>口コミ・お客様の声 | TS conditioning</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 48px;
+}
+.review-card {
+  background: var(--white);
+  border: 1px solid var(--gray-3);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.review-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+.review-card::before {
+  content: '"';
+  position: absolute;
+  top: -8px; right: 20px;
+  font-family: var(--font-display);
+  font-size: 80px;
+  color: var(--gray-1);
+  line-height: 1;
+  pointer-events: none;
+}
+.review-stars { color: var(--accent); font-size: 14px; margin-bottom: 14px; }
+.review-title { font-size: 15px; font-weight: 700; margin-bottom: 10px; line-height: 1.5; }
+.review-text { font-size: 14px; color: var(--gray-8); line-height: 1.9; margin-bottom: 16px; }
+.review-meta { font-size: 12px; color: var(--gray-5); border-top: 1px solid var(--gray-1); padding-top: 12px; }
+</style>
+</head>
+<body>
+<header id="site-header" data-light="true" class="light-bg">
+  <div class="header-inner">
+    <a href="index.html" class="logo" style="color:var(--black);">TS conditioning</a>
+    <nav class="pc-nav">
+      <a href="features.html" class="nav-link" style="color:var(--gray-8);">TSの特徴</a>
+      <a href="plan.html" class="nav-link" style="color:var(--gray-8);">料金</a>
+      <a href="program.html" class="nav-link" style="color:var(--gray-8);">プログラム</a>
+      <a href="flow.html" class="nav-link" style="color:var(--gray-8);">ご利用の流れ</a>
+      <a href="reviews.html" class="nav-link active" style="color:var(--black);">口コミ</a>
+      <a href="faq.html" class="nav-link" style="color:var(--gray-8);">FAQ</a>
+      <a href="access.html" class="nav-link" style="color:var(--gray-8);">アクセス</a>
+    </nav>
+    <a href="https://lin.ee/qMROsFb" target="_blank" class="header-cta" style="color:var(--black);border-color:var(--black);">無料体験を予約</a>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span style="background:var(--black);"></span><span style="background:var(--black);"></span><span style="background:var(--black);"></span>
+    </button>
+  </div>
+</header>
+<div id="mobile-nav">
+  <a href="features.html" class="mobile-nav-link">TSの特徴</a>
+  <a href="plan.html" class="mobile-nav-link">料金</a>
+  <a href="program.html" class="mobile-nav-link">プログラム</a>
+  <a href="flow.html" class="mobile-nav-link">ご利用の流れ</a>
+  <a href="reviews.html" class="mobile-nav-link">口コミ</a>
+  <a href="faq.html" class="mobile-nav-link">FAQ</a>
+  <a href="access.html" class="mobile-nav-link">アクセス</a>
+</div>
+
+<div class="page-hero">
+  <p class="section-label">REVIEW</p>
+  <h1 class="section-title">お客様の声</h1>
+  <div class="divider center"></div>
+  <p style="font-size:15px;color:rgba(255,255,255,0.65);max-width:480px;margin:0 auto;line-height:1.9;">
+    実際にご利用いただいたお客様からの声をご紹介します。
+  </p>
+</div>
+
+<section style="background:var(--gray-1);">
+  <div class="container">
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="review-stars">★★★★★</div>
+        <h4 class="review-title">一度行っただけで驚くほど楽になりました</h4>
+        <p class="review-text">仕事上、肩を使うことが多く常に負担を感じていて、こちらで姿勢改善をしていただき、一度行っただけで驚くほど楽になりとても感動しました！ジムはなかなか続かなかったのですが、パーソナルだからこそ無理なく続けられそうで、かつ楽しくトレーニングできるのでいつも楽しみに通っています！</p>
+        <p class="review-meta">20代女性</p>
+      </div>
+      <div class="review-card fade-up delay-1">
+        <div class="review-stars">★★★★★</div>
+        <h4 class="review-title">整形のリハビリとは効果が全く異なりビックリ</h4>
+        <p class="review-text">トレーナーさんは、とても知識豊富で、その日の体の様子と希望に合わせてプログラムを考えてくれます。筋力アップと体型改善を目的で通い始めましたが、膝を痛めてしまい、今は膝の痛みも一緒にみてもらっています。整形のリハビリも何度か受けましたが、効果が全く異なりビックリしました。</p>
+        <p class="review-meta">50代女性</p>
+      </div>
+      <div class="review-card fade-up delay-2">
+        <div class="review-stars">★★★★★</div>
+        <h4 class="review-title">9年近くお世話になっています</h4>
+        <p class="review-text">私は、30年くらい腰痛を患っているのですが、たくみトレーナーにお世話になってからは、腰痛がだいぶ緩和されました。ちょくちょく手首や肘も痛くなるのですが、その都度マッサージやストレッチをして頂いたり、痛みを緩和させる為のトレーニングをして頂いているので、痛みがすぐになくなります。</p>
+        <p class="review-meta">40代女性</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-stars">★★★★★</div>
+        <h4 class="review-title">5キロの減量に成功しました</h4>
+        <p class="review-text">オープン前からトレーニングを受けており、始める前と比べて日常生活で使う体幹がついた気がしています。特に転びそうになった時に倒れず身体を支える力がつきました。また、身体が軽くなった気がして体重を測ると5キロの減量に成功していました。無理なく続けられるようにサポートしていただけるトレーナーさんにとても感謝しています。</p>
+        <p class="review-meta">50代女性</p>
+      </div>
+      <div class="review-card fade-up delay-1">
+        <div class="review-stars">★★★★★</div>
+        <h4 class="review-title">停滞期だった体重が早速減ってびっくり</h4>
+        <p class="review-text">初めてのパーソナルで最初は不安でしたが、トレーナーさんはとても優しく教えてくれますし、褒めて伸ばしてくれるので、筋力が落ちていた私もとても楽しく行えました。食事のアドバイスも細かくしてくれるので、停滞期だった体重が早速減って来てびっくりです。この価格でここまでしてもらえるなんてすごくオススメです！</p>
+        <p class="review-meta">40代女性</p>
+      </div>
+      <div class="review-card fade-up delay-2">
+        <div class="review-stars">★★★★★</div>
+        <h4 class="review-title">階段の上り下りがラクになって驚いています</h4>
+        <p class="review-text">股関節を柔らかくしたくて通い始めて1ヶ月。立ち仕事で疲れやすかった下半身も、気付けば階段の上り下りがラクになっていて驚いています。体のクセを一瞬で見抜き、無理のない動きに導いてくれるので、毎回体が軽くなるのを実感します。今では週1回のトレーニングが体と心のリセット時間。信頼できるトレーナーさんに出会えて本当に良かったです！</p>
+        <p class="review-meta">50代女性</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-stars">★★★★★</div>
+        <h4 class="review-title">翌日には首が振り向けるように</h4>
+        <p class="review-text">首の痛みがあり振り向けなかったので、首を重点的にやっていただきました。翌日には左右とも振り向けるようになり、痛みも気にならないぐらいに効果を実感できました。またお願いしたいです。</p>
+        <p class="review-meta">20代女性</p>
+      </div>
+      <div class="review-card fade-up delay-1">
+        <div class="review-stars">★★★★★</div>
+        <h4 class="review-title">本当に「パーソナル」を実感できます</h4>
+        <p class="review-text">よくあるパーソナルトレーニングでは、60分の中で実際にトレーナーがついてくれるのは一部だけで、あとはランニングやバイクなどの自主トレが多い印象ですが、こちらでは違います。しっかりと60分間、マンツーマンでトレーニングやストレッチを丁寧に行ってくれるので、本当に「パーソナル」を実感できます。</p>
+        <p class="review-meta">40代女性</p>
+      </div>
+      <div class="review-card fade-up delay-2">
+        <div class="review-stars">★★★★★</div>
+        <h4 class="review-title">ヘルニアの腰痛が驚くほど改善</h4>
+        <p class="review-text">ある日、突然ぎっくり腰のような症状が出てしまい、整形外科でヘルニアと診断されました。しばらく投薬とリハビリを続けていたのですが、なかなか腰の痛みが引かず…こちらに伺いました。普段使わない筋肉を意識したメニューを丁寧に指導していただき、終わったあとは驚くほど腰が軽くなり、痛みも改善されていました。</p>
+        <p class="review-meta">50代女性</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-stars">★★★★★</div>
+        <h4 class="review-title">オンラインでも遠くから通えるのがいい</h4>
+        <p class="review-text">マンツーマンで教えてくれるところを探してて、今回紹介で行かせて頂きました。初めてで緊張してたけど、すごく優しいオーナー様で安心しました！シューズの貸し出しもあってよかったです！オンラインもやっていると聞き、遠く離れた場所でも受け入れられるという点がいいなと思いました。</p>
+        <p class="review-meta">30代女性</p>
+      </div>
+      <div class="review-card fade-up delay-1">
+        <div class="review-stars">★★★★★</div>
+        <h4 class="review-title">40代、筋力アップを実感</h4>
+        <p class="review-text">ジムやトレーニングなど一切しなく40代になり、筋力をつけたいと思い伺いました。カウンセリングで姿勢や生活習慣などをしっかりみていただき、気になる部分のトレーニングを中心にメニューを組んでいただけました。姿勢などを改善するために、どこをどのようにするかなど、細かく説明しながら筋トレしたのでモチベーションも上がり、とても良かったです。</p>
+        <p class="review-meta">40代女性</p>
+      </div>
+      <div class="review-card fade-up delay-2">
+        <div class="review-stars">★★★★★</div>
+        <h4 class="review-title">終わった時のスッキリ感と身体の軽さにびっくり</h4>
+        <p class="review-text">がっっっつりトレーニングしてもらいました！トレーナーさんの知識の幅が広く、自分の身体の硬いところや腰痛の原因をしっかり見てもらい、終わった時のスッキリ感と、身体の軽さにびっくりしました！駅からも近いし、スタジオも綺麗だし、これからもお世話になります！！</p>
+        <p class="review-meta">20代女性</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <p class="section-label">FREE TRIAL</p>
+  <h2 class="cta-band-title">あなたも変化を体感してください</h2>
+  <p class="cta-band-sub">まずは60分の無料体験から始めましょう。</p>
+  <div class="cta-band-btns">
+    <a href="https://lin.ee/qMROsFb" target="_blank" class="btn btn-line"><span>LINEで無料体験を予約</span></a>
+  </div>
+</div>
+
+<footer id="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">TS conditioning</p>
+        <p class="footer-tagline">あなた史上最高のコンディションを手にしよう。</p>
+        <div class="footer-info">
+          <strong>ADDRESS</strong>埼玉県川口市大字長蔵 FIESTA DE INOUE VI 2F
+          <strong>HOURS</strong>月〜土 9:00–21:00 ／ 日 9:00–13:00
+          <strong>TEL</strong>080-2053-4035
+        </div>
+      </div>
+      <div>
+        <p style="font-size:11px;letter-spacing:.15em;color:var(--accent-l);margin-bottom:16px;">NAVIGATION</p>
+        <div class="footer-nav-grid">
+          <a href="index.html">ホーム</a><a href="features.html">TSの特徴</a>
+          <a href="plan.html">料金</a><a href="program.html">プログラム</a>
+          <a href="flow.html">ご利用の流れ</a><a href="reviews.html">口コミ</a>
+          <a href="faq.html">よくある質問</a><a href="access.html">アクセス</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-sns">
+        <a href="https://lin.ee/qMROsFb" target="_blank" aria-label="LINE">LINE</a>
+        <a href="https://www.instagram.com/ts.conditioning/" target="_blank" aria-label="Instagram">IG</a>
+      </div>
+      <p class="footer-copy">© 2025 TS conditioning. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<div class="float-cta">
+  <a href="https://lin.ee/qMROsFb" target="_blank" class="float-btn line">📲 LINE予約</a>
+  <a href="tel:08020534035" class="float-btn tel">📞 電話する</a>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

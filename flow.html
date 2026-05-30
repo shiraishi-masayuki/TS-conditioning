@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ご利用の流れ | TS conditioning</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.flow-steps { margin-top: 56px; position: relative; }
+.flow-steps::before {
+  content: '';
+  position: absolute;
+  left: 31px;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: var(--gray-3);
+}
+.flow-step {
+  display: flex;
+  gap: 32px;
+  padding-bottom: 48px;
+  position: relative;
+}
+.flow-step:last-child { padding-bottom: 0; }
+.flow-step-num {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 300;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.flow-step-body { padding-top: 14px; }
+.flow-step-body h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+.flow-step-body p { font-size: 15px; color: var(--gray-5); line-height: 1.9; }
+.flow-step-tag {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 2px 10px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+<header id="site-header" data-light="true" class="light-bg">
+  <div class="header-inner">
+    <a href="index.html" class="logo" style="color:var(--black);">TS conditioning</a>
+    <nav class="pc-nav">
+      <a href="features.html" class="nav-link" style="color:var(--gray-8);">TSの特徴</a>
+      <a href="plan.html" class="nav-link" style="color:var(--gray-8);">料金</a>
+      <a href="program.html" class="nav-link" style="color:var(--gray-8);">プログラム</a>
+      <a href="flow.html" class="nav-link active" style="color:var(--black);">ご利用の流れ</a>
+      <a href="reviews.html" class="nav-link" style="color:var(--gray-8);">口コミ</a>
+      <a href="faq.html" class="nav-link" style="color:var(--gray-8);">FAQ</a>
+      <a href="access.html" class="nav-link" style="color:var(--gray-8);">アクセス</a>
+    </nav>
+    <a href="https://lin.ee/qMROsFb" target="_blank" class="header-cta" style="color:var(--black);border-color:var(--black);">無料体験を予約</a>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span style="background:var(--black);"></span><span style="background:var(--black);"></span><span style="background:var(--black);"></span>
+    </button>
+  </div>
+</header>
+<div id="mobile-nav">
+  <a href="features.html" class="mobile-nav-link">TSの特徴</a>
+  <a href="plan.html" class="mobile-nav-link">料金</a>
+  <a href="program.html" class="mobile-nav-link">プログラム</a>
+  <a href="flow.html" class="mobile-nav-link">ご利用の流れ</a>
+  <a href="reviews.html" class="mobile-nav-link">口コミ</a>
+  <a href="faq.html" class="mobile-nav-link">FAQ</a>
+  <a href="access.html" class="mobile-nav-link">アクセス</a>
+</div>
+
+<div class="page-hero">
+  <p class="section-label">HOW TO USE</p>
+  <h1 class="section-title">ご利用の流れ</h1>
+  <div class="divider center"></div>
+  <p style="font-size:15px;color:rgba(255,255,255,0.65);max-width:440px;margin:0 auto;line-height:1.9;">
+    初めての方でも安心して始められるよう、<br>
+    スムーズな手続きをご用意しています。
+  </p>
+</div>
+
+<section>
+  <div class="container" style="max-width:700px;">
+    <p class="section-label fade-up">STEP BY STEP</p>
+    <h2 class="section-title fade-up delay-1">かんたん4ステップ</h2>
+    <div class="divider fade-up delay-2"></div>
+
+    <div class="flow-steps">
+      <div class="flow-step fade-up">
+        <div class="flow-step-num">1</div>
+        <div class="flow-step-body">
+          <span class="flow-step-tag">LINE / WEB</span>
+          <h3>LINEで無料体験を予約</h3>
+          <p>公式LINEに友達追加し、希望の日時をお送りください。お電話・予約フォームでもご予約いただけます。ご不明な点はお気軽にご相談ください。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-up delay-1">
+        <div class="flow-step-num">2</div>
+        <div class="flow-step-body">
+          <span class="flow-step-tag">事前準備</span>
+          <h3>カウンセリングシートの記入</h3>
+          <p>ご予約後、オンラインカウンセリングシートをお送りします。事前にご記入いただくことで、当日すぐにトレーニングに集中できます。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-up delay-2">
+        <div class="flow-step-num">3</div>
+        <div class="flow-step-body">
+          <span class="flow-step-tag">当日</span>
+          <h3>来店 → カウンセリング → 体験</h3>
+          <p>動きやすい服装でお越しください。まず丁寧なカウンセリングで現在のお身体の状態と目標を確認。その後、60分の無料体験トレーニングを実施します。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-up delay-3">
+        <div class="flow-step-num">4</div>
+        <div class="flow-step-body">
+          <span class="flow-step-tag">ご入会</span>
+          <h3>プランのご提案 → 継続スタート</h3>
+          <p>体験後にご希望に合わせた最適なプランをご提案します。ご入会の強制は一切ありません。じっくりご検討の上、続けるかどうかを決めていただけます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sm" style="background:var(--gray-1);">
+  <div class="container" style="max-width:700px;">
+    <p class="section-label fade-up">NOTICE</p>
+    <h2 class="section-title fade-up delay-1">ご来店の際のご案内</h2>
+    <div class="divider fade-up delay-2"></div>
+    <div style="display:grid;gap:16px;margin-top:8px;">
+      <div class="fade-up delay-1" style="display:flex;gap:16px;align-items:flex-start;padding:20px;background:var(--white);border-radius:var(--radius);border:1px solid var(--gray-3);">
+        <span style="font-size:24px;flex-shrink:0;">👟</span>
+        <div>
+          <h4 style="font-size:15px;font-weight:700;margin-bottom:4px;">動きやすい服装で</h4>
+          <p style="font-size:13px;color:var(--gray-5);">シューズの貸し出しも行っております。手ぶらでもご参加いただけます。</p>
+        </div>
+      </div>
+      <div class="fade-up delay-2" style="display:flex;gap:16px;align-items:flex-start;padding:20px;background:var(--white);border-radius:var(--radius);border:1px solid var(--gray-3);">
+        <span style="font-size:24px;flex-shrink:0;">🚗</span>
+        <div>
+          <h4 style="font-size:15px;font-weight:700;margin-bottom:4px;">お車でも安心</h4>
+          <p style="font-size:13px;color:var(--gray-5);">駐車場をご用意しております。アクセスページでご確認ください。</p>
+        </div>
+      </div>
+      <div class="fade-up delay-3" style="display:flex;gap:16px;align-items:flex-start;padding:20px;background:var(--white);border-radius:var(--radius);border:1px solid var(--gray-3);">
+        <span style="font-size:24px;flex-shrink:0;">💧</span>
+        <div>
+          <h4 style="font-size:15px;font-weight:700;margin-bottom:4px;">お持ち物</h4>
+          <p style="font-size:13px;color:var(--gray-5);">タオル・水分補給用のドリンクをご持参ください。着替えスペースもございます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <p class="section-label">FREE TRIAL</p>
+  <h2 class="cta-band-title">まずは無料体験から<br>始めてみましょう</h2>
+  <p class="cta-band-sub">ご予約はLINEからかんたんにできます。</p>
+  <div class="cta-band-btns">
+    <a href="https://lin.ee/qMROsFb" target="_blank" class="btn btn-line"><span>LINEで無料体験を予約</span></a>
+  </div>
+</div>
+
+<footer id="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">TS conditioning</p>
+        <p class="footer-tagline">あなた史上最高のコンディションを手にしよう。</p>
+        <div class="footer-info">
+          <strong>ADDRESS</strong>埼玉県川口市大字長蔵 FIESTA DE INOUE VI 2F
+          <strong>HOURS</strong>月〜土 9:00–21:00 ／ 日 9:00–13:00
+          <strong>TEL</strong>080-2053-4035
+        </div>
+      </div>
+      <div>
+        <p style="font-size:11px;letter-spacing:.15em;color:var(--accent-l);margin-bottom:16px;">NAVIGATION</p>
+        <div class="footer-nav-grid">
+          <a href="index.html">ホーム</a><a href="features.html">TSの特徴</a>
+          <a href="plan.html">料金</a><a href="program.html">プログラム</a>
+          <a href="flow.html">ご利用の流れ</a><a href="reviews.html">口コミ</a>
+          <a href="faq.html">よくある質問</a><a href="access.html">アクセス</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-sns">
+        <a href="https://lin.ee/qMROsFb" target="_blank" aria-label="LINE">LINE</a>
+        <a href="https://www.instagram.com/ts.conditioning/" target="_blank" aria-label="Instagram">IG</a>
+      </div>
+      <p class="footer-copy">© 2025 TS conditioning. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<div class="float-cta">
+  <a href="https://lin.ee/qMROsFb" target="_blank" class="float-btn line">📲 LINE予約</a>
+  <a href="tel:08020534035" class="float-btn tel">📞 電話する</a>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

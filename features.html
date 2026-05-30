@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TSの特徴 | TS conditioning</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  padding: 72px 0;
+  border-bottom: 1px solid var(--gray-3);
+}
+.feature-block:last-child { border-bottom: none; }
+.feature-block.reverse .feature-text { order: 2; }
+.feature-block.reverse .feature-img  { order: 1; }
+.feature-img {
+  background: var(--gray-1);
+  border-radius: var(--radius);
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--gray-5);
+  letter-spacing: 0.1em;
+}
+.feature-num {
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 300;
+  color: var(--gray-3);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.feature-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.feature-body {
+  font-size: 15px;
+  color: var(--gray-8);
+  line-height: 2;
+}
+@media (max-width: 768px) {
+  .feature-block { grid-template-columns: 1fr; gap: 32px; }
+  .feature-block.reverse .feature-text { order: 1; }
+  .feature-block.reverse .feature-img  { order: 2; }
+  .feature-img { height: 240px; }
+}
+</style>
+</head>
+<body>
+<header id="site-header" data-light="true" class="light-bg">
+  <div class="header-inner">
+    <a href="index.html" class="logo" style="color:var(--black);">TS conditioning</a>
+    <nav class="pc-nav">
+      <a href="features.html" class="nav-link" style="color:var(--gray-8);">TSの特徴</a>
+      <a href="plan.html" class="nav-link" style="color:var(--gray-8);">料金</a>
+      <a href="program.html" class="nav-link" style="color:var(--gray-8);">プログラム</a>
+      <a href="flow.html" class="nav-link" style="color:var(--gray-8);">ご利用の流れ</a>
+      <a href="reviews.html" class="nav-link" style="color:var(--gray-8);">口コミ</a>
+      <a href="faq.html" class="nav-link" style="color:var(--gray-8);">FAQ</a>
+      <a href="access.html" class="nav-link" style="color:var(--gray-8);">アクセス</a>
+    </nav>
+    <a href="https://lin.ee/qMROsFb" target="_blank" class="header-cta" style="color:var(--black);border-color:var(--black);">無料体験を予約</a>
+    <button class="hamburger" id="hamburger" aria-label="メニュー">
+      <span style="background:var(--black);"></span>
+      <span style="background:var(--black);"></span>
+      <span style="background:var(--black);"></span>
+    </button>
+  </div>
+</header>
+<div id="mobile-nav">
+  <a href="features.html" class="mobile-nav-link">TSの特徴</a>
+  <a href="plan.html" class="mobile-nav-link">料金</a>
+  <a href="program.html" class="mobile-nav-link">プログラム</a>
+  <a href="flow.html" class="mobile-nav-link">ご利用の流れ</a>
+  <a href="reviews.html" class="mobile-nav-link">口コミ</a>
+  <a href="faq.html" class="mobile-nav-link">FAQ</a>
+  <a href="access.html" class="mobile-nav-link">アクセス</a>
+</div>
+
+<div class="page-hero">
+  <p class="section-label">FEATURES</p>
+  <h1 class="section-title">TSが選ばれる理由</h1>
+  <div class="divider center"></div>
+  <p style="font-size:15px; color:rgba(255,255,255,0.65); max-width:480px; margin:0 auto; line-height:1.9;">
+    TS conditioningは通常のパーソナルジムとは大きく異なります。<br>
+    お客様一人一人のお悩みに寄り添い、<br>
+    その日の体調に合わせた最適なプログラムを提供します。
+  </p>
+</div>
+
+<section>
+  <div class="container">
+    <div class="feature-block">
+      <div class="feature-text fade-up">
+        <div class="feature-num">01</div>
+        <p class="section-label">PAIN APPROACH</p>
+        <h2 class="feature-title">痛みへのアプローチ</h2>
+        <div class="divider"></div>
+        <p class="feature-body">
+          痛みのない身体づくりを、運動でサポート。<br><br>
+          ストレッチと筋力強化で姿勢を整え、腰・肩・膝などの不調を根本から改善します。日常で使えていない「サボり筋」と、その補填で疲弊している「ガンバり筋」のバランスを運動とストレッチで整えることで、痛みから解放できるやり方があります。
+        </p>
+      </div>
+      <div class="feature-img fade-up delay-2">写真スペース</div>
+    </div>
+
+    <div class="feature-block reverse">
+      <div class="feature-text fade-up">
+        <div class="feature-num">02</div>
+        <p class="section-label">ONLINE TRAINING</p>
+        <h2 class="feature-title">オンライントレーニング</h2>
+        <div class="divider"></div>
+        <p class="feature-body">
+          移動ゼロで、隙間時間がトレーニング時間に。<br><br>
+          オンラインなら自宅からすぐに始められるため、忙しい方でも隙間時間を有効活用できます。トレーニング後はそのまま自宅でリラックスできるのも魅力。生活のペースを崩さず、無理なく続けられます。
+        </p>
+      </div>
+      <div class="feature-img fade-up delay-2">写真スペース</div>
+    </div>
+
+    <div class="feature-block">
+      <div class="feature-text fade-up">
+        <div class="feature-num">03</div>
+        <p class="section-label">VERBAL COACHING</p>
+        <h2 class="feature-title">わかりやすい言語化指導</h2>
+        <div class="divider"></div>
+        <p class="feature-body">
+          感覚ではなく「わかる」トレーニング指導。<br><br>
+          動作や身体の使い方を「言語化」し、どなたでも理解しやすい形でお伝えします。「なぜこの動きが必要なのか」「どこに意識を向ければ効果が出るのか」という根拠のあるコーチングで、身体への理解が深まり、効果的に変化を実感いただけます。
+        </p>
+      </div>
+      <div class="feature-img fade-up delay-2">写真スペース</div>
+    </div>
+
+    <div class="feature-block reverse">
+      <div class="feature-text fade-up">
+        <div class="feature-num">04</div>
+        <p class="section-label">JUNIOR TRAINING</p>
+        <h2 class="feature-title">子どもの運動指導が得意</h2>
+        <div class="divider"></div>
+        <p class="feature-body">
+          お子さまの「できた！」を育てるトレーニング。<br><br>
+          運動神経は才能ではなく、誰にでも伸ばせる力。特に成長期は身体の使い方やバランス感覚がぐんぐん育つ大切なタイミングです。楽しみながら「できた！」を積み重ねる指導で、お子さまの成長を一緒に応援します。
+        </p>
+      </div>
+      <div class="feature-img fade-up delay-2">写真スペース</div>
+    </div>
+
+    <div class="feature-block">
+      <div class="feature-text fade-up">
+        <div class="feature-num">05</div>
+        <p class="section-label">USER EXPERIENCE</p>
+        <h2 class="feature-title">スムーズなユーザー体験</h2>
+        <div class="divider"></div>
+        <p class="feature-body">
+          手間なく始められる、快適な体験設計。<br><br>
+          オンラインカウンセリングシートの事前記入や、予約時の決済完了システムを導入し、面倒な手続きを最小限に。スムーズな流れでトレーニングに集中できる環境を整えており、初めての方でも安心してご利用いただけます。
+        </p>
+      </div>
+      <div class="feature-img fade-up delay-2">写真スペース</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <p class="section-label">FREE TRIAL</p>
+  <h2 class="cta-band-title">その悩み、今日から変えませんか？</h2>
+  <p class="cta-band-sub">60分で「原因」と「改善方法」がわかります。</p>
+  <div class="cta-band-btns">
+    <a href="https://lin.ee/qMROsFb" target="_blank" class="btn btn-line"><span>LINEで無料体験を予約</span></a>
+  </div>
+</div>
+
+<footer id="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">TS conditioning</p>
+        <p class="footer-tagline">あなた史上最高のコンディションを手にしよう。</p>
+        <div class="footer-info">
+          <strong>ADDRESS</strong>埼玉県川口市大字長蔵 FIESTA DE INOUE VI 2F
+          <strong>HOURS</strong>月〜土 9:00–21:00 ／ 日 9:00–13:00
+          <strong>TEL</strong>080-2053-4035
+        </div>
+      </div>
+      <div>
+        <p style="font-size:11px;letter-spacing:.15em;color:var(--accent-l);margin-bottom:16px;">NAVIGATION</p>
+        <div class="footer-nav-grid">
+          <a href="index.html">ホーム</a><a href="features.html">TSの特徴</a>
+          <a href="plan.html">料金</a><a href="program.html">プログラム</a>
+          <a href="flow.html">ご利用の流れ</a><a href="reviews.html">口コミ</a>
+          <a href="faq.html">よくある質問</a><a href="access.html">アクセス</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-sns">
+        <a href="https://lin.ee/qMROsFb" target="_blank" aria-label="LINE">LINE</a>
+        <a href="https://www.instagram.com/ts.conditioning/" target="_blank" aria-label="Instagram">IG</a>
+      </div>
+      <p class="footer-copy">© 2025 TS conditioning. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<div class="float-cta">
+  <a href="https://lin.ee/qMROsFb" target="_blank" class="float-btn line">📲 LINE予約</a>
+  <a href="tel:08020534035" class="float-btn tel">📞 電話する</a>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>
